@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, send_file
+from flask import Flask , render_template, jsonify, request, send_file
 from src.exception import CustomException
 from src.logger import logging as lg
 import os,sys
@@ -24,7 +24,7 @@ def train_route():
     except Exception as e:
         raise CustomException(e,sys)
 
-@app.route('/predict', methods=['POST', 'GET'])
+@app.route('/upload', methods=['POST', 'GET'])
 def upload():
     
     try:

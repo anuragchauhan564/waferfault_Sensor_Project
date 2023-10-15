@@ -25,7 +25,10 @@ class DataIngestion:
  
     def export_collection_as_dataframe(self,collection_name, db_name):
         try:
-            mongo_client = MongoClient(MONGO_DB_URL)
+            
+            uri = "mongodb+srv://anurajput564:anurajput564@cluster0.bb3fzpu.mongodb.net/?retryWrites=true&w=majority"
+
+            mongo_client = MongoClient(uri)
 
             collection = mongo_client[db_name][collection_name]
 
